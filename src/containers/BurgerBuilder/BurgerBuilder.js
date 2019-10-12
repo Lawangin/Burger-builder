@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Aux from '../../hoc/Auxiliary';
+import Aux from '../../hoc/Aux';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
@@ -11,7 +11,7 @@ const INGREDIENT_PRICES = {
     cheese: 0.4,
     meat: 1.3,
     bacon: 0.7
-}
+};
 
 class BurgerBuilder extends Component {
     state = {
@@ -24,7 +24,7 @@ class BurgerBuilder extends Component {
         totalPrice: 4,
         purchaseable: false,
         purchasing: false
-    }
+    };
 
     updatePurchaseState (ingredients) {
         // turns state object into an array and returns the value to each key
@@ -52,7 +52,7 @@ class BurgerBuilder extends Component {
             ingredients: updatedIngredients
         });
         this.updatePurchaseState(updatedIngredients);
-    }
+    };
 
     removeIngredientHandler = (type) => {
         const oldCount = this.state.ingredients[type];
@@ -72,19 +72,19 @@ class BurgerBuilder extends Component {
             ingredients: updatedIngredients
         });
         this.updatePurchaseState(updatedIngredients);
-    }
+    };
 
     purchaseHandler = () => {
         this.setState({purchasing: true});
-    }
+    };
 
     purchaseCancelHandler = () => {
         this.setState({purchasing: false});
-    }
+    };
 
     purchaseContinueHandler = () => {
         alert('You Continue!~');
-    }
+    };
 
     render() {
         const disabledInfo = {
