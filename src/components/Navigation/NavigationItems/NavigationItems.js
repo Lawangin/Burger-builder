@@ -1,21 +1,15 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import classes from './NavigationItems.module.css';
-// import NavigationItem from './NavigationItem/NavigationItem';
+import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationItems = (props) => (
     <ul className={classes.NavigationItems}>
-        <li>
-            <NavLink to="/burgerbuilder">
-                Burger Builder
-            </NavLink>
-        </li>
-        <li>
-            <NavLink to="/checkout">
-                Checkout
-            </NavLink>
-        </li>
+        <NavigationItem link="/" exact>Burger Builder</NavigationItem>
+        {props.isAuthenticated ? <NavigationItem link="/orders">Orders</NavigationItem> : null }
+        {!props.isAuthenticated ?
+            <NavigationItem link="/auth">Sign Up/Log in</NavigationItem> :
+            <NavigationItem link="/logout">Log Out</NavigationItem>}
     </ul>
 );
 
