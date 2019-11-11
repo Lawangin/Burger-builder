@@ -6,17 +6,18 @@
 }
 
 .NavigationItem a {
-    color: #7f3608;
+    color: #fff;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
     display: block;
+    font-weight: bold;
 }
 
 .NavigationItem a:hover,
 .NavigationItem a:active,
 .NavigationItem a.active {
-    color: #40A4C8;
+    color: #7f3608;
 }
 
 @media (min-width: 500px) {

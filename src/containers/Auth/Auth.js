@@ -42,6 +42,7 @@ class Auth extends Component {
             }
         },
         isSignup: true
+
     };
 
     componentDidMount() {
@@ -146,16 +147,20 @@ class Auth extends Component {
 
         return (
             <div className={classes.Auth} >
-                {authRedirected}
-                {errorMessage}
-                <form onSubmit={this.submitHandler}>
-                    {form}
-                    <Button btnType="Success" >SUBMIT</Button>
-                </form>
                 <Button
                     clicked={this.switchAuthModeHandler}
                     btnType="Danger"
                 >SWITCH TO {this.state.isSignup ? 'LOGIN' : 'SIGN UP'}</Button>
+                {authRedirected}
+                {errorMessage}
+                <form onSubmit={this.submitHandler}>
+                    {form}
+                    <Button
+                        btnType="Success"
+                    >
+                        {this.state.isSignup ? 'SIGN UP' : 'LOGIN'}
+                    </Button>
+                </form>
             </div>
         );
     }
