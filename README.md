@@ -1,7 +1,11 @@
 
 ## Build A Burger App
 
-In order run app if code is downloaded, you must run:
+### Demo:
+
+![Burger-builder-demo](./src/assets/images/Nov-26-2019%20burger-app.gif)
+
+After cloning app, you must run:
 
 ### `npm install`
 
@@ -15,7 +19,7 @@ and lastly run:
 
 to launch the app.
 
-Demo of app can be found here:
+Live Demo of app can be found here:
 #### `http://create-a-burger.s3-website-us-east-1.amazonaws.com/`
 
 
